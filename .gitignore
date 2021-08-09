@@ -50,6 +50,7 @@ jspm_packages/
 functions/nodemodules/
 functions/package-lock.json
 package-lock.json
+.firebase/
 
 # TypeScript v1 declaration files
 typings/
