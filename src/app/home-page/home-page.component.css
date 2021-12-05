@@ -1,0 +1,16 @@
+.image{
+    height: 1025px;
+    width:1280px;
+    /*background-color: #99cccc; */
+    background-size:cover;
+    background-image:url('src\assets\homepage.svg');
+    background-position: center;
+  }
+
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .image {
+    width:auto;
+    background-image:url('src\assets\homepage_large.svg');
+  }
+}
