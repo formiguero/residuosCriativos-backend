@@ -1,6 +1,14 @@
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .fundo{
+    width: auto;
+    background-image: url('src\assets\background\homepage_mobile.svg');
+  }
+}
+
 .fundo {
   height: 1025px;
-  width: 1280px;
+  /**width: auto;**/
   background-size: cover;
   background-image: url('src\assets\background\homepage.svg');
   background-position: center;
