@@ -1,16 +1,28 @@
-.image{
-    height: 1025px;
-    width:1280px;
-    /*background-color: #99cccc; */
-    background-size:cover;
-    background-image:url('src\assets\homepage.svg');
-    background-position: center;
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .fundo{
+    width: auto;
+    background-image: url('src\assets\background\homepage_mobile.svg');
   }
+}
 
-  /* Extra large devices (large laptops and desktops, 1200px and up) */
+.fundo {
+  height: 1025px;
+  /**width: auto;**/
+  background-size: cover;
+  background-image: url('src\assets\background\homepage.svg');
+  background-position: center;
+}
+
+/* projetos_icon */
+.btn-projetos {
+  background: url(src\assets\icons\projetos_icon.svg);
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-  .image {
-    width:auto;
-    background-image:url('src\assets\homepage_large.svg');
+  .fundo {
+    width: auto;
+    background-image: url('src\assets\background\homepage_large.svg');
   }
 }
