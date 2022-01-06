@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { APP_BASE_HREF } from '@angular/common';
 
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
@@ -13,6 +14,11 @@ import { SobreProjetoComponent } from './sobre-projeto/sobre-projeto.component';
 import { ContatoComponent } from './contato/contato.component';
 import { TrocasComponent } from './trocas/trocas.component';
 import { ResiduosComponent } from './residuos/residuos.component';
+import { LoginComponent } from './login/login.component';
+import { CadastroComponent } from './cadastro/cadastro.component';
+import { AppRoutingModule } from './app-routing.module';
+import { CadastroPessoaFisicaComponent } from './cadastro/cadastro-pessoa-fisica/cadastro-pessoa-fisica.component';
+import { CadastroPessoaJuridicaComponent } from './cadastro/cadastro-pessoa-juridica/cadastro-pessoa-juridica.component';
 
 
 @NgModule({
@@ -24,7 +30,11 @@ import { ResiduosComponent } from './residuos/residuos.component';
     SobreProjetoComponent,
     ContatoComponent,
     TrocasComponent,
-    ResiduosComponent
+    ResiduosComponent,
+    LoginComponent,
+    CadastroComponent,
+    CadastroPessoaFisicaComponent,
+    CadastroPessoaJuridicaComponent
   ],
 
   //Modules
@@ -33,11 +43,12 @@ import { ResiduosComponent } from './residuos/residuos.component';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     AngularFireDatabaseModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
 
   //Services, Guards
-  providers: [],
+  providers: [{provide: APP_BASE_HREF, useValue: '/'}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

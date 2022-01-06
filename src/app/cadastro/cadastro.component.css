@@ -1,0 +1,12 @@
+/*Menu button*/
+.menu-button button{
+    margin:10px;
+}
+/*Page content*/
+.main-content{
+    margin:110px 100px 200px 100px;
+}
+
+.main-content button{
+    margin:20px;
+}
