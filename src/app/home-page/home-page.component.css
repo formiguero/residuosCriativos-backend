@@ -4,6 +4,12 @@
     width: auto;
     background-image: url('src\assets\background\homepage_mobile.svg');
   }
+
+ 
+
+
+
+ 
 }
 
 .fundo {
@@ -12,6 +18,10 @@
   background-size: cover;
   background-image: url('src\assets\background\homepage.svg');
   background-position: center;
+}
+
+.fundo button{
+  margin:10px;
 }
 
 /* projetos_icon */
@@ -25,4 +35,5 @@
     width: auto;
     background-image: url('src\assets\background\homepage_large.svg');
   }
+
 }
