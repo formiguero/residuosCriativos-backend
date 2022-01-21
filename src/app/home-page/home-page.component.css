@@ -15,9 +15,9 @@
 }
 
 /* projetos_icon */
-.btn-projetos {
+/*.btn-projetos {
   background: url(src\assets\icons\projetos_icon.svg);
-}
+}*/
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
