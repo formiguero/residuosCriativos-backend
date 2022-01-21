@@ -5,11 +5,6 @@
     background-image: url('src\assets\background\homepage_mobile.svg');
   }
 
- 
-
-
-
- 
 }
 
 .fundo {
@@ -22,11 +17,6 @@
 
 .fundo button{
   margin:10px;
-}
-
-/* projetos_icon */
-.btn-projetos {
-  background: url(src\assets\icons\projetos_icon.svg);
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
