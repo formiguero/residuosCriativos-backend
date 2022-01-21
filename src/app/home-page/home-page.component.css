@@ -4,6 +4,7 @@
     width: auto;
     background-image: url('src\assets\background\homepage_mobile.svg');
   }
+
 }
 
 .fundo {
@@ -14,10 +15,9 @@
   background-position: center;
 }
 
-/* projetos_icon */
-/*.btn-projetos {
-  background: url(src\assets\icons\projetos_icon.svg);
-}*/
+.fundo button{
+  margin:10px;
+}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
@@ -25,4 +25,5 @@
     width: auto;
     background-image: url('src\assets\background\homepage_large.svg');
   }
+
 }
