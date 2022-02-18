@@ -21,7 +21,7 @@ export class CadastroPessoaJuridicaComponent implements OnInit {
       address:'',
       city:'',
       state:'',
-      phone:0,
+      phone:"",
       email:'',
       password:''
     }

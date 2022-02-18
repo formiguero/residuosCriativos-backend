@@ -6,7 +6,7 @@ export interface PessoaJuridicaModel{
     address:string;
     city:string;
     state:string;
-    phone:number;
+    phone:string;
     email:string;
     password:string;
 

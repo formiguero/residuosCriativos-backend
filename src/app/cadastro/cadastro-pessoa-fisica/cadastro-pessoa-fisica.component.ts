@@ -19,7 +19,7 @@ export class CadastroPessoaFisicaComponent implements OnInit {
       address:'',
       city:'',
       state:'',
-      phone:0,
+      phone:'',
       email:'',
       password:'',
     }
