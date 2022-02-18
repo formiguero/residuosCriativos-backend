@@ -5,53 +5,6 @@ const jwt=require('jsonwebtoken');
 
 const { db } = require("../firebase");
 
-router.get('/',(req,res,next)=>{
-    let listEmail=[];
-    //let UserLogin = db.collection("UsersBusiness").where('email','==','lulu@gmail.com')
-    let EmailValid=false;
-    let UserLogin = db.collection("Users")
-    .get().then((response)=>{
-
-        response.forEach((docs)=>{
-            listEmail.push(docs.data().email);
-
-
-        });
-        
-        listEmail.forEach((email)=>{
-            if(email=='josuesantosnasc@gmail.com'){
-                EmailValid=true;
-            }else{
-                EMailValid=false;
-            }
-        })
-    });
-
-
-    
-   
-
-
-
-
-    
-    /*.get()
-    .then((querySnapshot)=>{
-        
-        querySnapshot.forEach((doc)=>{
-            res.send(doc.data());
-        });
-
-       
-    }).catch((error)=>{
-        console.log('Error in getting documentos',error);
-    });*/
-
-    
-
-    
-});
-
 
 router.post('/',async (req,res)=>{
     const {email,password}=req.body;
@@ -74,7 +27,8 @@ router.post('/',async (req,res)=>{
                     token:token,
                     expiresIn:3600,
                     email:doc.data().email,
-                    cpf:doc.data().cpf
+                    cpf:doc.data().cpf,
+                    name:doc.data().name
                 })
                 isUserBusiness=false;
            }else{

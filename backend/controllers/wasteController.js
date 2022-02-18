@@ -14,7 +14,7 @@ router.get('/',(req,res)=>{
 
     WasteDb.get().then((docs)=>{
         docs.forEach((doc)=>{
-            WasteList.push(doc.data());
+            WasteList.push({id:doc.id,data:doc.data()});
         })
 
         res.send(WasteList);
@@ -24,11 +24,14 @@ router.get('/',(req,res)=>{
 
 router.post('/',async (req,res)=>{
     let WasteDb=db.collection('WasteRegistration');
-   
+    let UserDbBusiness = db.collection("UsersBusiness").doc(`${req.body.cnpj}`);
 
+    UserDbBusiness.get().then(async (doc)=>{
 
-    if(WasteDb){
         await WasteDb.add({
+            cnpj:req.body.cnpj,
+            phone:doc.data().phone,
+            email:doc.data().email,
             name:req.body.name,
             type:req.body.type,
             sector:req.body.sector,
@@ -36,9 +39,17 @@ router.post('/',async (req,res)=>{
             description:req.body.description
         });
 
-        console.log('Data Saved');
-    }
+        console.log('Data saved');
+
+    })
+
+    
+});
+
+router.delete('/:id',(req,res)=>{
     
 })
+
+
 
 module.exports=router;
