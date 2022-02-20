@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import './styles/materialize/css/materialize.min.css';
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
@@ -9,3 +10,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     pointer-events: auto !important;
 }
 
+.footer-text {
+    color: #212121;
+}
