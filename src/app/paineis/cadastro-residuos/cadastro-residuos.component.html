@@ -1,0 +1,170 @@
+<nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
+    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Company name</a>
+    <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+    <ul class="navbar-nav px-3">
+      <li class="nav-item text-nowrap">
+        <a class="nav-link" (click)="Logout()">Sign out</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+      <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+        <div class="sidebar-sticky">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link " routerLink="/painel-pessoa-juridica">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                Resíduos
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/solicitantes-residuos">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                Solicitantes
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>
+                Cadastrar Resíduos <span class="sr-only">(atual)</span>
+              </a>
+            </li>
+          
+          </ul>
+
+       
+       
+        </div>
+      </nav>
+      
+      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4"><div style="position: absolute; inset: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;" class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
+        
+    
+        <div class="text-center">
+            <form class="form-signin" #userWasteForm="ngForm" (ngSubmit)="onSubmit(userWasteForm)">
+                <img class="mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+                <h1 class="h3 mb-3 font-weight-normal">Cadastro de Resíduos</h1>
+                <input type="hidden" name="cnpj" #name="ngModel" [(ngModel)]="userService.userWaste.cnpj">
+
+               
+                <input type="text" id="inputName" name="name" #name="ngModel" [(ngModel)]="userService.userWaste.name"   class="form-control" placeholder="Nome do Resíduo" required autofocus="">
+                <label for="inputName" class="sr-only">Nome do Resíduo:</label>
+                <br><br>
+
+                <h2>Selecione o tipo de resíduo:</h2>
+                <input type="hidden" name="type" #name="ngModel" [(ngModel)]="userService.userWaste.type"  >
+               
+                <div class="form-check ">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="Retalhos de Tecidos Sintéticos" (change)="GetStats($event)">
+                    <label class="form-check-label" for="inlineCheckbox1">Retalhos de Tecidos Sintéticos</label>
+                  </div>
+                  <div class="form-check ">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="Retalhos de Tecidos Planos" (change)="GetStats($event)">
+                    <label class="form-check-label" for="inlineCheckbox2">Retalhos de Tecidos Planos</label>
+                  </div>
+                  <div class="form-check ">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="Retalhos de Tecidos de Malha" (change)="GetStats($event)">
+                    <label class="form-check-label" for="inlineCheckbox3">Retalhos de Tecidos de Malha</label>
+                  </div>
+                  <div class="form-check ">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="Fibrilas Têxteis" (change)="GetStats($event)">
+                    <label class="form-check-label" for="inlineCheckbox4">Fibrilas Têxteis</label>
+                  </div>
+                  <div class="form-check ">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="Plástico: botões,manequins,tubo de linhas e cabides" (change)="GetStats($event)">
+                    <label class="form-check-label" for="inlineCheckbox5">Plástico: botões,manequins,tubo de linhas e cabides</label>
+                  </div>
+                  <div class="form-check ">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox6" value="Plástico: embalagens de produtos" (change)="GetStats($event)">
+                    <label class="form-check-label" for="inlineCheckbox6">Plástico: embalagens de produtos</label>
+                  </div>
+                  <div class="form-check ">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox7" value="Plástico: sacolas" (change)="GetStats($event)">
+                    <label class="form-check-label" for="inlineCheckbox7">Plástico: sacolas</label>
+                  </div>
+                  <div class="form-check ">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox8" value="Plástico: tampas" (change)="GetStats($event)">
+                    <label class="form-check-label" for="inlineCheckbox8">Plástico: tampas</label>
+                  </div>
+                  <div class="form-check ">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox9" value="Plástico: garrafa pet" (change)="GetStats($event)">
+                    <label class="form-check-label" for="inlineCheckbox9">Plástico: garrafa pet</label>
+                  </div>
+                  <div class="form-check ">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox10" value="Papel e Papelão" (change)="GetStats($event)">
+                    <label class="form-check-label" for="inlineCheckbox10">Papel e Papelão</label>
+                  </div>
+                  <div class="form-check ">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox11" value="Outros" (change)="GetStats($event)">
+                    <label class="form-check-label" for="inlineCheckbox11">Outros</label>
+                  </div>
+                  
+                  <br><br>
+
+                  <h2>Ramo do Setor:</h2>
+
+                  <input type="hidden" name="sector" #name="ngModel" [(ngModel)]="userService.userWaste.sector"  >
+                 
+                  <div class="form-check ">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox12" value="Confecção Moda Praia" (change)="GetStatsSector($event)">
+                    <label class="form-check-label" for="inlineCheckbox12">Confecção Moda Praia</label>
+                  </div>
+                  <div class="form-check ">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox13" value="Confecção Moda Fitness" (change)="GetStatsSector($event)">
+                    <label class="form-check-label" for="inlineCheckbox13">Confecção Moda Fitness</label>
+                  </div>
+                  <div class="form-check ">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox14" value="Confecção Surfwear" (change)="GetStatsSector($event)">
+                    <label class="form-check-label" for="inlineCheckbox14">Confecção Surfwear</label>
+                  </div>
+                  <div class="form-check ">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox15" value="Confecção Tecido Plano e Malha" (change)="GetStatsSector($event)">
+                    <label class="form-check-label" for="inlineCheckbox15">Confecção Tecido Plano e Malha</label>
+                  </div>
+                  <div class="form-check ">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox16" value="Lavanderia de Beneficiamento" (change)="GetStatsSector($event)" >
+                    <label class="form-check-label" for="inlineCheckbox16">Lavanderia de Beneficiamento</label>
+                  </div>
+                  <div class="form-check ">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox17" value="Aviamento" (change)="GetStatsSector($event)" >
+                    <label class="form-check-label" for="inlineCheckbox17">Aviamento</label>
+                  </div>
+                  <div class="form-check ">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox18" value="Embalagem" (change)="GetStatsSector($event)">
+                    <label class="form-check-label" for="inlineCheckbox18">Embalagem</label>
+                  </div>
+                  <div class="form-check ">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox19" value="Acessórios" (change)="GetStatsSector($event)">
+                    <label class="form-check-label" for="inlineCheckbox19">Acessórios</label>
+                  </div>
+                  <div class="form-check ">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox20" value="Outros" (change)="GetStatsSector($event)">
+                    <label class="form-check-label" for="inlineCheckbox20">Outros</label>
+                  </div>
+
+                  <br><br>
+
+                  <h2>Selecione a imagem do resíduo:</h2>
+                <input type="file" name="imagePath" #name="ngModel" [(ngModel)]="userService.userWaste.imagePath" class="form-control" id="customFile" (change)="upload($event)" accept="*.png.jpg" />
+
+               
+                  <br><br>
+                <input type="text" id="inputDescription" name="description"  #name="ngModel" [(ngModel)]="userService.userWaste.description"  class="form-control" placeholder="Descrição do Produto" required autofocus="">
+                <label for="inputDescription" class="sr-only">Descrição</label>
+                
+                <br><br><br>
+              
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Enviar</button>
+             
+              </form>
+
+           
+        </div>
+        
+      
+      </main>
+    </div>
+  </div>
+

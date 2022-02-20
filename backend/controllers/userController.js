@@ -9,23 +9,17 @@ const { db } = require("../firebase");
 
 
 
-router.get("/", (req, res) => {
+router.get("/", async (req, res) => {
   let UsersData = db.collection("Users");
-  let UsersBusinessData = db.collection("UsersBusiness");
+  
   let listUser = [];
   UsersData.get().then((docs) => {
     docs.forEach((doc) => {
-      listUser.push(doc.data());
-    });
-  });
-
-  UsersBusinessData.get().then((docs) => {
-    docs.forEach((doc) => {
-      listUser.push(doc.data());
-    
+      listUser.push({name:doc.data().name,cpf:doc.data().cpf});
     });
     res.send(listUser);
   });
+
 
   
 
