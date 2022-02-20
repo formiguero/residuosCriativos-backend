@@ -1,47 +1,43 @@
 <div class="text-center">
-    <form class="form-signin">
+    <form class="form-signin" #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
         <img class="mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
         <h1 class="h3 mb-3 font-weight-normal">Faça seu cadastro de Pessoa Fisica</h1>
         
-        <input type="text" id="inputName" class="form-control" placeholder="Nome" required autofocus="">
+        <input type="text" id="inputName" name="name" #name="ngModel" [(ngModel)]="userService.userPessoaFisica.name"  class="form-control" placeholder="Nome" required autofocus="">
         <label for="inputName" class="sr-only">Nome:</label>
 
        
-        <input type="number" id="inputCPF" class="form-control" placeholder="CPF" required autofocus="">
+        <input type="text" id="inputCPF" name="cpf" #name="ngModel" [(ngModel)]="userService.userPessoaFisica.CPF" class="form-control" placeholder="CPF" mask="CPF_CNPJ" required autofocus="">
         <label for="inputCPF" class="sr-only">CPF:</label>
 
         
-        <input type="text" id="inputAddress" class="form-control" placeholder="Endereço" required autofocus="">
+        <input type="text" id="inputAddress" name="address" #name="ngModel" [(ngModel)]="userService.userPessoaFisica.address" class="form-control" placeholder="Endereço" required autofocus="">
         <label for="inputAddress" class="sr-only">Endereço:</label>
 
         
-        <input type="text" id="inputCity" class="form-control" placeholder="Cidade" required autofocus="">
+        <input type="text" id="inputCity" name="city" #name="ngModel" [(ngModel)]="userService.userPessoaFisica.city" class="form-control" placeholder="Cidade" required autofocus="">
         <label for="inputCity" class="sr-only">Cidade:</label>
 
 
         
-        <input type="text" id="inputState" class="form-control" placeholder="Estado" required autofocus="">
+        <input type="text" id="inputState" name="state" #name="ngModel" [(ngModel)]="userService.userPessoaFisica.state" class="form-control" placeholder="Estado" required autofocus="">
         <label for="inputState" class="sr-only">Estado:</label>
 
 
         
-        <input type="tel" id="inputPhone" class="form-control" placeholder="Cidade" required autofocus="">
+        <input type="tel" id="inputPhone" name="phone" #name="ngModel" [(ngModel)]="userService.userPessoaFisica.phone" class="form-control" placeholder="Telefone" mask="(00) 00000-0000" required autofocus="">
         <label for="inputPhone" class="sr-only">Telefone:</label>
 
        
-        <input type="email" id="inputEmail" class="form-control" placeholder="Email" required>
+        <input type="email" id="inputEmail" name="email" #name="ngModel" [(ngModel)]="userService.userPessoaFisica.email" class="form-control" placeholder="Email" required>
         <label for="inputEmail" class="sr-only">Email:</label>
 
         
-        <input type="email" id="inputPassword" class="form-control" placeholder="Senha" pattern=".{8,}" required>
+        <input type="email" id="inputPassword" name="password" #name="ngModel" [(ngModel)]="userService.userPessoaFisica.password" class="form-control" placeholder="Senha" pattern=".{8,}" required>
         <label for="inputPassword" class="sr-only">Senha:</label>
         <br>
-        <div class="checkbox mb-3">
-          <label>
-            <input type="checkbox" value="remember-me"> Remember me
-          </label>
-        </div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
-        <p class="mt-5 mb-3 text-muted">© 2017-2018</p>
+      
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Cadastrar</button>
+        
       </form>
 </div>
