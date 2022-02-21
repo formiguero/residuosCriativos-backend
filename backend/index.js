@@ -15,7 +15,7 @@ const auth=require('./middleware/check-auth');
 
 app.use(express.json());
 
-app.use(cors({origin:'http://localhost:4200'}));
+app.use(cors({origin:'http://nutrientescriativos.com.br'}));
 
 app.use('/registration',userController);
 
