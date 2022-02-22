@@ -24,7 +24,7 @@ export class UsersService {
   tokenNewPassword:string;
   emailNewPassword:string;
 
-  readonly URL='http://localhost:3000';  
+  readonly URL='/';  
   
   
   constructor(private http:HttpClient,private router:Router) { }
@@ -32,60 +32,60 @@ export class UsersService {
   /* Post Requests*/
 
   postuserPessoaFisica(userPessoaFisica:PessoaFisicaModel){
-    return this.http.post(this.URL + "/registration",userPessoaFisica);
+    return this.http.post(this.URL + "registration",userPessoaFisica);
 
   }
 
   postuserPessoaJuridica(userPessoaJuridica:PessoaJuridicaModel){
-    return this.http.post(this.URL +"/registration",userPessoaJuridica);
+    return this.http.post(this.URL +"registration",userPessoaJuridica);
   }
 
   postWaste(userWaste:WasteModel){
-    return this.http.post(this.URL +"/waste",userWaste);
+    return this.http.post(this.URL +"waste",userWaste);
   }
 
   postCustomer(customer:CustomerModel){
-    return this.http.post(this.URL+"/customers",customer);
+    return this.http.post(this.URL+"customers",customer);
 
   }
 
   UserLogin(UserData:LoginModel){
-    return this.http.post(this.URL+'/login',UserData);
+    return this.http.post(this.URL+'login',UserData);
   }
 
   ResetPassword(Email:ResetPasswordModel){
-    return this.http.post(this.URL+"/reset-password",Email);
+    return this.http.post(this.URL+"reset-password",Email);
   }
 
   NewPassword(NewPassword:NewPasswordModel){
-    return this.http.post(this.URL + `/reset-password/${this.emailNewPassword}/${this.tokenNewPassword}`,NewPassword);
+    return this.http.post(this.URL + `reset-password/${this.emailNewPassword}/${this.tokenNewPassword}`,NewPassword);
   }
 
 
   /*Get Requests*/
 
   getWasteRegistration(){
-    return this.http.get<Array<WasteModel>>(this.URL+"/waste")
+    return this.http.get<Array<WasteModel>>(this.URL+"waste")
   }
 
   getUser(){
-    return this.http.get(this.URL + '/registration')
+    return this.http.get(this.URL + 'registration')
   }
 
   getCustomers(){
-    return this.http.get(this.URL +"/customers");
+    return this.http.get(this.URL +"customers");
   }
 
   /*Delete Request*/
 
   deleteCustomer(id:string){
-    return this.http.delete(this.URL+`/customers/${id}`);
+    return this.http.delete(this.URL+`customers/${id}`);
   }
 
   /*Update Request*/
 
   updateCustomerSelected(id:string){
-    return this.http.put(this.URL+`/customers/${id}`,id);
+    return this.http.put(this.URL+`customers/${id}`,id);
   }
 
   /*Authentication*/ 
