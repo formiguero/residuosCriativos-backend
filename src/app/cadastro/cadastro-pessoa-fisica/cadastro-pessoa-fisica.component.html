@@ -1,6 +1,5 @@
 <div class="text-center">
     <form class="form-signin" #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
-        <img class="mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
         <h1 class="h3 mb-3 font-weight-normal">Faça seu cadastro de Pessoa Fisica</h1>
         
         <input type="text" id="inputName" name="name" #name="ngModel" [(ngModel)]="userService.userPessoaFisica.name"  class="form-control" placeholder="Nome" required autofocus="">
@@ -33,7 +32,7 @@
         <label for="inputEmail" class="sr-only">Email:</label>
 
         
-        <input type="email" id="inputPassword" name="password" #name="ngModel" [(ngModel)]="userService.userPessoaFisica.password" class="form-control" placeholder="Senha" pattern=".{8,}" required>
+        <input type="password" id="inputPassword" name="password" #name="ngModel" [(ngModel)]="userService.userPessoaFisica.password" class="form-control" placeholder="Senha" pattern=".{8,}" required>
         <label for="inputPassword" class="sr-only">Senha:</label>
         <br>
       

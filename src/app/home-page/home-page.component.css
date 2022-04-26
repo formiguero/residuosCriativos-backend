@@ -1,10 +1,12 @@
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-  .fundo{
-    width: auto;
-    background-image: url('src\assets\background\homepage_mobile.svg');
-  }
 
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
 }
 
 .fundo {
@@ -24,6 +26,15 @@
   .fundo {
     width: auto;
     background-image: url('src\assets\background\homepage_large.svg');
+  }
+
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .fundo{
+    width: auto;
+    background-image: url('src\assets\background\homepage_mobile.svg');
   }
 
 }
