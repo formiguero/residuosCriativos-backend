@@ -13,22 +13,24 @@ import { AuthGuard } from './shared/auth.guard';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { NewPasswordComponent } from './reset-password/new-password/new-password.component';
 import { SolicitantesResiduosComponent } from './paineis/solicitantes-residuos/solicitantes-residuos.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 const routes:Routes=[
-  {path:'',component:HomePageComponent},
-  {path:'login',component:LoginComponent},
-  {path:'cadastro',component:CadastroComponent,children:[
-    {path:'pessoa-fisica',component:CadastroPessoaFisicaComponent},
-    {path:'pessoa-juridica',component:CadastroPessoaJuridicaComponent}
+  {path:'', component:HomePageComponent},
+  {path:'navbar', component: NavbarComponent},
+  {path:'login', component:LoginComponent},
+  {path:'cadastro', component:CadastroComponent,children:[
+    {path:'pessoa-fisica', component:CadastroPessoaFisicaComponent},
+    {path:'pessoa-juridica', component:CadastroPessoaJuridicaComponent}
   ]},
   {path:'residuos', component:ResiduosComponent},
-  {path:'reset-password',component:ResetPasswordComponent},
-  {path:'new-password/:email/:token',component:NewPasswordComponent},
-  {path:'painel-pessoa-fisica',component:PainelPessoaFisicaComponent,canActivate:[AuthGuard]},
-  {path:'painel-pessoa-juridica',component:PainelPessoaJuridicaComponent,canActivate:[AuthGuard]},
-  {path:'cadastro-residuos',component:CadastroResiduosComponent,canActivate:[AuthGuard]},
-  {path:'solicitantes-residuos',component:SolicitantesResiduosComponent,canActivate:[AuthGuard]}
+  {path:'reset-password', component:ResetPasswordComponent},
+  {path:'new-password/:email/:token', component:NewPasswordComponent},
+  {path:'painel-pessoa-fisica', component:PainelPessoaFisicaComponent,canActivate:[AuthGuard]},
+  {path:'painel-pessoa-juridica', component:PainelPessoaJuridicaComponent,canActivate:[AuthGuard]},
+  {path:'cadastro-residuos', component:CadastroResiduosComponent,canActivate:[AuthGuard]},
+  {path:'solicitantes-residuos', component:SolicitantesResiduosComponent,canActivate:[AuthGuard]}
 ]
 
 @NgModule({

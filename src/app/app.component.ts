@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-//import * as M from '../assets/materialize/M';
+//import * as M from '../styles/materialize/M';
 
 @Component({
   selector: 'app-root',

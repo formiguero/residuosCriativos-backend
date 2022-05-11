@@ -2,12 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { APP_BASE_HREF } from '@angular/common';
-import { NgxMaskModule, IConfig } from 'ngx-mask'
+import { NgxMaskModule } from 'ngx-mask'
 
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
-import { AngularFireDatabaseModule} from '@angular/fire/database';
-import {AngularFireStorageModule} from '@angular/fire/storage';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFireStorageModule } from '@angular/fire/storage';
 import { environment } from 'src/environments/environment';
 import {HttpClientModule} from '@angular/common/http';
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -36,6 +36,7 @@ import { NewPasswordComponent } from './reset-password/new-password/new-password
 import { SolicitantesResiduosComponent } from './paineis/solicitantes-residuos/solicitantes-residuos.component';
 import { PopUpComponent } from './paineis/painel-pessoa-fisica/pop-up/pop-up.component';
 import { PopUpDeleteComponent } from './paineis/solicitantes-residuos/pop-up-delete/pop-up-delete.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 @NgModule({
@@ -59,7 +60,8 @@ import { PopUpDeleteComponent } from './paineis/solicitantes-residuos/pop-up-del
     NewPasswordComponent,
     SolicitantesResiduosComponent,
     PopUpComponent,
-    PopUpDeleteComponent
+    PopUpDeleteComponent,
+    NavbarComponent
   ],
 
   //Modules
