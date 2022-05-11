@@ -1,7 +1,7 @@
 .fundo {
     height: 1025px;
     /**width: auto;
-    background-size: cover;**/
+    background-size: cover;
     background-image: url('src\assets\background\residuos_confeccao.png');
-    background-position: center;
+    background-position: center;**/
 }
