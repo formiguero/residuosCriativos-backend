@@ -1,4 +1,3 @@
-
 body {
   display: flex;
   min-height: 100vh;
@@ -11,30 +10,26 @@ main {
 
 .fundo {
   height: 1025px;
-  /**width: auto;**/
   background-size: cover;
-  background-image: url('src\assets\background\homepage.svg');
   background-position: center;
 }
 
-.fundo button{
-  margin:10px;
+.fundo button {
+  margin: 10px;
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
+/* Apply small(sm) devices and up to medium(md) devices (less than 992px) */
+@media (max-width: 991.98px) {
+  .fundo {
+    width: auto;
+    background-image: url('src\assets\background\homepage_mobile.svg');
+  }
+}
+
+/* Apply from large(lg) devices and up to extra-large(xl) devices (992px and up) */
+@media (min-width: 992px) {
   .fundo {
     width: auto;
     background-image: url('src\assets\background\homepage_large.svg');
   }
-
-}
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-  .fundo{
-    width: auto;
-    background-image: url('src\assets\background\homepage_mobile.svg');
-  }
-
 }
