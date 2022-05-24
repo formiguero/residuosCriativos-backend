@@ -37,6 +37,7 @@ import { SolicitantesResiduosComponent } from './paineis/solicitantes-residuos/s
 import { PopUpComponent } from './paineis/painel-pessoa-fisica/pop-up/pop-up.component';
 import { PopUpDeleteComponent } from './paineis/solicitantes-residuos/pop-up-delete/pop-up-delete.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -61,7 +62,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     SolicitantesResiduosComponent,
     PopUpComponent,
     PopUpDeleteComponent,
-    NavbarComponent
+    NavbarComponent,
+    FooterComponent
   ],
 
   //Modules

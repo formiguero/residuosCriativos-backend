@@ -13,12 +13,10 @@ import { AuthGuard } from './shared/auth.guard';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { NewPasswordComponent } from './reset-password/new-password/new-password.component';
 import { SolicitantesResiduosComponent } from './paineis/solicitantes-residuos/solicitantes-residuos.component';
-import { NavbarComponent } from './navbar/navbar.component';
 
 
 const routes:Routes=[
   {path:'', component:HomePageComponent},
-  {path:'navbar', component: NavbarComponent},
   {path:'login', component:LoginComponent},
   {path:'cadastro', component:CadastroComponent,children:[
     {path:'pessoa-fisica', component:CadastroPessoaFisicaComponent},

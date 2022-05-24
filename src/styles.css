@@ -2,14 +2,9 @@
 @import './styles/materialize/css/materialize.min.css';
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 [type="checkbox"]:not(:checked), [type="checkbox"]:checked{
     position:none !important;
     opacity: 1 !important;
     pointer-events: auto !important;
-}
-
-.footer-text {
-    color: #212121;
 }
