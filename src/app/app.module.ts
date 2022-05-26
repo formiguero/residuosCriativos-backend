@@ -18,9 +18,6 @@ import {MatDialogModule} from '@angular/material/dialog';
 
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
-import { SobreProjetoComponent } from './sobre-projeto/sobre-projeto.component';
-import { ContatoComponent } from './contato/contato.component';
-import { TrocasComponent } from './trocas/trocas.component';
 import { ResiduosComponent } from './residuos/residuos.component';
 import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
@@ -46,9 +43,6 @@ import { FooterComponent } from './footer/footer.component';
   declarations: [
     AppComponent,
     HomePageComponent,
-    SobreProjetoComponent,
-    ContatoComponent,
-    TrocasComponent,
     ResiduosComponent,
     LoginComponent,
     CadastroComponent,
