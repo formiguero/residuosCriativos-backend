@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from "@angular/router";
 import { HomePageComponent } from './home-page/home-page.component';
-import { ResiduosComponent } from './residuos/residuos.component';
+import { ProjetosComponent } from './projetos/projetos.component';
 import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { CadastroPessoaFisicaComponent } from './cadastro/cadastro-pessoa-fisica/cadastro-pessoa-fisica.component';
@@ -13,6 +13,10 @@ import { AuthGuard } from './shared/auth.guard';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { NewPasswordComponent } from './reset-password/new-password/new-password.component';
 import { SolicitantesResiduosComponent } from './paineis/solicitantes-residuos/solicitantes-residuos.component';
+import { PesquisadoresComponent } from './pesquisadores/pesquisadores.component';
+import { EventosComponent } from './eventos/eventos.component';
+import { ComunicacaoComponent } from './comunicacao/comunicacao.component';
+import { ArquivosComponent } from './arquivos/arquivos.component';
 
 
 const routes:Routes=[
@@ -22,7 +26,11 @@ const routes:Routes=[
     {path:'pessoa-fisica', component:CadastroPessoaFisicaComponent},
     {path:'pessoa-juridica', component:CadastroPessoaJuridicaComponent}
   ]},
-  {path:'residuos', component:ResiduosComponent},
+  {path:'projetos', component:ProjetosComponent},
+  {path:'pesquisadores', component:PesquisadoresComponent},
+  {path:'eventos', component:EventosComponent},
+  {path:'comunicacao', component:ComunicacaoComponent},
+  {path:'arquivos', component:ArquivosComponent},
   {path:'reset-password', component:ResetPasswordComponent},
   {path:'new-password/:email/:token', component:NewPasswordComponent},
   {path:'painel-pessoa-fisica', component:PainelPessoaFisicaComponent,canActivate:[AuthGuard]},

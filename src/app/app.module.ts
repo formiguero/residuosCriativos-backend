@@ -18,10 +18,6 @@ import {MatDialogModule} from '@angular/material/dialog';
 
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
-import { SobreProjetoComponent } from './sobre-projeto/sobre-projeto.component';
-import { ContatoComponent } from './contato/contato.component';
-import { TrocasComponent } from './trocas/trocas.component';
-import { ResiduosComponent } from './residuos/residuos.component';
 import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -38,6 +34,11 @@ import { PopUpComponent } from './paineis/painel-pessoa-fisica/pop-up/pop-up.com
 import { PopUpDeleteComponent } from './paineis/solicitantes-residuos/pop-up-delete/pop-up-delete.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
+import { ProjetosComponent } from './projetos/projetos.component';
+import { PesquisadoresComponent } from './pesquisadores/pesquisadores.component';
+import { EventosComponent } from './eventos/eventos.component';
+import { ComunicacaoComponent } from './comunicacao/comunicacao.component';
+import { ArquivosComponent } from './arquivos/arquivos.component';
 
 
 @NgModule({
@@ -46,10 +47,6 @@ import { FooterComponent } from './footer/footer.component';
   declarations: [
     AppComponent,
     HomePageComponent,
-    SobreProjetoComponent,
-    ContatoComponent,
-    TrocasComponent,
-    ResiduosComponent,
     LoginComponent,
     CadastroComponent,
     CadastroPessoaFisicaComponent,
@@ -63,7 +60,12 @@ import { FooterComponent } from './footer/footer.component';
     PopUpComponent,
     PopUpDeleteComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    ProjetosComponent,
+    PesquisadoresComponent,
+    EventosComponent,
+    ComunicacaoComponent,
+    ArquivosComponent
   ],
 
   //Modules
@@ -83,7 +85,6 @@ import { FooterComponent } from './footer/footer.component';
     MatButtonModule,
     MatDialogModule,
     NgxMaskModule.forRoot()
-   
   ],
 
   //Services, Guards
