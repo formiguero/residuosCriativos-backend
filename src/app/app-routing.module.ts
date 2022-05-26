@@ -22,15 +22,15 @@ import { ArquivosComponent } from './arquivos/arquivos.component';
 const routes:Routes=[
   {path:'', component:HomePageComponent},
   {path:'login', component:LoginComponent},
-  {path:'cadastro', component:CadastroComponent,children:[
-    {path:'pessoa-fisica', component:CadastroPessoaFisicaComponent},
-    {path:'pessoa-juridica', component:CadastroPessoaJuridicaComponent}
-  ]},
   {path:'projetos', component:ProjetosComponent},
   {path:'pesquisadores', component:PesquisadoresComponent},
   {path:'eventos', component:EventosComponent},
   {path:'comunicacao', component:ComunicacaoComponent},
   {path:'arquivos', component:ArquivosComponent},
+  {path:'cadastro', component:CadastroComponent,children:[
+    {path:'pessoa-fisica', component:CadastroPessoaFisicaComponent},
+    {path:'pessoa-juridica', component:CadastroPessoaJuridicaComponent}
+  ]},
   {path:'reset-password', component:ResetPasswordComponent},
   {path:'new-password/:email/:token', component:NewPasswordComponent},
   {path:'painel-pessoa-fisica', component:PainelPessoaFisicaComponent,canActivate:[AuthGuard]},
