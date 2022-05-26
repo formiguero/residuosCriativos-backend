@@ -18,7 +18,6 @@ import {MatDialogModule} from '@angular/material/dialog';
 
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
-import { ResiduosComponent } from './residuos/residuos.component';
 import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -35,6 +34,7 @@ import { PopUpComponent } from './paineis/painel-pessoa-fisica/pop-up/pop-up.com
 import { PopUpDeleteComponent } from './paineis/solicitantes-residuos/pop-up-delete/pop-up-delete.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
+import { ProjetosComponent } from './projetos/projetos.component';
 
 
 @NgModule({
@@ -43,7 +43,6 @@ import { FooterComponent } from './footer/footer.component';
   declarations: [
     AppComponent,
     HomePageComponent,
-    ResiduosComponent,
     LoginComponent,
     CadastroComponent,
     CadastroPessoaFisicaComponent,
@@ -57,7 +56,8 @@ import { FooterComponent } from './footer/footer.component';
     PopUpComponent,
     PopUpDeleteComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    ProjetosComponent
   ],
 
   //Modules
@@ -77,7 +77,6 @@ import { FooterComponent } from './footer/footer.component';
     MatButtonModule,
     MatDialogModule,
     NgxMaskModule.forRoot()
-   
   ],
 
   //Services, Guards
