@@ -36,6 +36,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { ProjetosComponent } from './projetos/projetos.component';
 import { PesquisadoresComponent } from './pesquisadores/pesquisadores.component';
+import { EventosComponent } from './eventos/eventos.component';
 
 
 @NgModule({
@@ -59,7 +60,8 @@ import { PesquisadoresComponent } from './pesquisadores/pesquisadores.component'
     NavbarComponent,
     FooterComponent,
     ProjetosComponent,
-    PesquisadoresComponent
+    PesquisadoresComponent,
+    EventosComponent
   ],
 
   //Modules

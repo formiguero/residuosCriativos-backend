@@ -14,6 +14,7 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
 import { NewPasswordComponent } from './reset-password/new-password/new-password.component';
 import { SolicitantesResiduosComponent } from './paineis/solicitantes-residuos/solicitantes-residuos.component';
 import { PesquisadoresComponent } from './pesquisadores/pesquisadores.component';
+import { EventosComponent } from './eventos/eventos.component';
 
 
 const routes:Routes=[
@@ -25,6 +26,7 @@ const routes:Routes=[
   ]},
   {path:'projetos', component:ProjetosComponent},
   {path:'pesquisadores', component:PesquisadoresComponent},
+  {path:'eventos', component:EventosComponent},
   {path:'reset-password', component:ResetPasswordComponent},
   {path:'new-password/:email/:token', component:NewPasswordComponent},
   {path:'painel-pessoa-fisica', component:PainelPessoaFisicaComponent,canActivate:[AuthGuard]},
