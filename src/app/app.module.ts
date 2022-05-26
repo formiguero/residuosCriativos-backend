@@ -37,6 +37,8 @@ import { FooterComponent } from './footer/footer.component';
 import { ProjetosComponent } from './projetos/projetos.component';
 import { PesquisadoresComponent } from './pesquisadores/pesquisadores.component';
 import { EventosComponent } from './eventos/eventos.component';
+import { ComunicacaoComponent } from './comunicacao/comunicacao.component';
+import { ArquivosComponent } from './arquivos/arquivos.component';
 
 
 @NgModule({
@@ -61,7 +63,9 @@ import { EventosComponent } from './eventos/eventos.component';
     FooterComponent,
     ProjetosComponent,
     PesquisadoresComponent,
-    EventosComponent
+    EventosComponent,
+    ComunicacaoComponent,
+    ArquivosComponent
   ],
 
   //Modules
