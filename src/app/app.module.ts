@@ -35,6 +35,7 @@ import { PopUpDeleteComponent } from './paineis/solicitantes-residuos/pop-up-del
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { ProjetosComponent } from './projetos/projetos.component';
+import { PesquisadoresComponent } from './pesquisadores/pesquisadores.component';
 
 
 @NgModule({
@@ -57,7 +58,8 @@ import { ProjetosComponent } from './projetos/projetos.component';
     PopUpDeleteComponent,
     NavbarComponent,
     FooterComponent,
-    ProjetosComponent
+    ProjetosComponent,
+    PesquisadoresComponent
   ],
 
   //Modules
