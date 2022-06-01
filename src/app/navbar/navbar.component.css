@@ -1,8 +1,25 @@
-.navbar {
+nav {
     background-color: #82b3e1;
 }
 
 img {
-    width: 100px;
-    height: 66px;
+    margin-bottom: 10px;
+    height: 54px;
+}
+
+li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+a .sidenav-trigger i {
+    text-transform: none;
+}
+
+.brand-logo {
+    margin-left: 30px;
+}
+
+.btn {
+    text-transform: none;
 }
