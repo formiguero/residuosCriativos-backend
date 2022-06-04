@@ -1,7 +1,21 @@
 .fundo {
-    height: 1025px;
-    /**width: auto;
+    height: 921px;
     background-size: cover;
-    background-image: url('src\assets\background\residuos_confeccao.png');
-    background-position: center;**/
+    background-position: center;
 }
+
+/* Apply small(sm) devices and up to medium(md) devices (less than 992px) */
+@media (max-width: 991.98px) {
+    .fundo {
+      width: auto;
+      background-image: url('src/assets/background/eventos-sm.svg');
+    }
+  }
+  
+  /* Apply large(lg) devices and up to extra-large(xl) devices (992px and up) */
+  @media (min-width: 992px) {
+    .fundo {
+      width: auto;
+      background-image: url('src/assets/background/eventos-xl.svg');
+    }
+  }
